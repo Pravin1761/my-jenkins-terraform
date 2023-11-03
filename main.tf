@@ -17,3 +17,13 @@
       Name = "Redhat Instance"
     }
   }
+
+  resource "aws_instance" "test1" {
+    ami          = "ami-0931978297f275f71"
+    instance_type = "t2.micro"
+    key_name     = "my-jenkins"
+
+    tags = {
+      Name = "test1"
+    }
+  }
