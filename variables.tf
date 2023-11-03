@@ -1,6 +1,17 @@
+variable "ami" {
+   type        = string
+   description = "Ubuntu AMI"
+   default     = "ami-065deacbcaac64cf2"
 }
-variable "bucket_prefix" {
-    type        = string
-    description = "(required since we are not using 'bucket') Creates a unique bucket name beginning with the specified prefix"
-    default     = "my-s3bucket-"
+
+variable "instance_type" {
+   type        = string
+   description = "Instance type"
+   default     = "t2.micro"
+}
+
+variable "name_tag" {
+   type        = string
+   description = "Name of the EC2 instance"
+   default     = "My Ubuntu Instance"
 }
